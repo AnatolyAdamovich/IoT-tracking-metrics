@@ -1,0 +1,7 @@
+wokwi-esp32/.pio*
+wokwi-esp32/.vscode/.browse.c_cpp.db*
+wokwi-esp32/.vscode/c_cpp_properties.json
+wokwi-esp32/.vscode/launch.json
+wokwi-esp32/.vscode/ipch
+backend/__pycache__*
+backend/venv*
