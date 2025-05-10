@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "author": "anatoly",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -37.58, "left": -96.37, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht1", "top": -32.2, "left": 40.16, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht2", "top": 80.2, "left": -250.16, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht3", "top": 100.2, "left": 170.16, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+
+      [ "dht1:VCC", "esp:3V3", "red", [ "v109.3", "h-170.36", "v-200.78" ] ],
+      [ "dht1:SDA", "esp:15", "green", [ "v0" ] ],
+      [ "dht1:GND", "esp:GND.1", "black", [ "v99.7", "h-189.56", "v-66.38" ] ],
+
+      [ "dht2:VCC", "esp:3V3", "red", [ "v109.3", "h-170.36", "v-200.78" ] ],
+      [ "dht2:SDA", "esp:12", "green", [ "v0" ] ],
+      [ "dht2:GND", "esp:GND.1", "black", [ "v99.7", "h-189.56", "v-66.38" ] ],
+
+      [ "dht3:VCC", "esp:3V3", "red", [ "v109.3", "h-170.36", "v-200.78" ] ],
+      [ "dht3:SDA", "esp:16", "green", [ "v0" ] ],
+      [ "dht3:GND", "esp:GND.1", "black", [ "v99.7", "h-189.56", "v-66.38" ] ]
+    ],
+    "dependencies": {}
+  }
